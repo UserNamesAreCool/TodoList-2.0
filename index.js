@@ -26,5 +26,6 @@ app.get('/update/:id', todoListRender.editPage);
 app.post('/update', todoListRender.edit);
 app.post('/new', todoListRender.add);
 if ('todos' in db.collections) {
-    app.listen(3000, () => console.log('http://localhost:3000'))
+    let port = process.env.PORT || 3000
+    app.listen(port, () => console.log(`http://localhost:${port}`))
 }
