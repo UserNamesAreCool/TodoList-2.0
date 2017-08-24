@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const todoListRender= require('./renderer/todo.js');
 const todoList = require('./models/todo.js');
 
-mongoose.connect("mongodb://localhost/todolist")
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/test')
 
 const app = express();
 const db = mongoose.connection;
