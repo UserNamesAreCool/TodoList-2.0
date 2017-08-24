@@ -7,4 +7,4 @@ const todoSchema = new Schema({
     info: {creationDate: {type: Date, default: Date.now}} // Incase more info is to be added
 }) 
 
-module.exports = mongoose.model('Todo', todoSchema);
+module.exports = mongoose.model('todos', todoSchema);

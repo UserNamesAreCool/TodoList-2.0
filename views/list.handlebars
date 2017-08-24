@@ -1,0 +1,14 @@
+<h1>Todo list</h1>
+<form action="/new" method="post" id="1">
+<input type="text" name="name" placeholder="name"><button type="submit" form="1">Submit</button>
+</form>
+
+<div>
+{{#if resp}}
+    <ul>
+        {{#each resp}}
+            <li><span>{{name}} <a href="/update/{{_id}}">Update</a> <a href="/del/{{_id}}">Delete</a></li>
+        {{/each}}
+    </ul>
+{{/if}}
+</div>
