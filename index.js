@@ -14,6 +14,7 @@ const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'MongoDB connection error'));
 
+app.use('/static', express.static('public'))
 app.use(bp.urlencoded({ extended: false }))
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));

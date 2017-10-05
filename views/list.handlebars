@@ -3,12 +3,13 @@
 <input type="text" name="name" placeholder="name"><button type="submit" form="1">Submit</button>
 </form>
 
-<div>
-{{#if resp}}
-    <ul>
-        {{#each resp}}
-            <li><span>{{name}} <a href="/update/{{_id}}">Update</a> <a href="/del/{{_id}}">Delete</a></li>
-        {{/each}}
-    </ul>
-{{/if}}
+<div class="todos">
+	{{#if resp}}
+		{{#each resp}}
+			<div class="todo">
+				<p>{{name}}</p>
+				<a href="/update/{{_id}}" class="safe">Update</a> <a href="/del/{{_id}}" class="danger">Delete</a>
+			</div>
+		{{/each}}
+	{{/if}}
 </div>
